@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入vue的核心外部文件-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+    </script>
+  
+    <title>Document</title>
+</head>
+<body>
+     <div id="app">
+         <input type="radio" value="lin" name="star" v-model="name"/>林书豪
+         <input type="radio" value="zhu" name="star" v-model="name"/>朱一龙
+         <input type="radio" value="qiao" name="star" v-model="name"/>乔碧螺殿下
+       <img v-if="name=='lin'"  style="width: 200px;height: 150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575976761377&di=c9030588f04ef6c659aec043662d87db&imgtype=0&src=http%3A%2F%2Fe0.ifengimg.com%2F03%2F2018%2F1204%2F1223A6B2F58119B8850A99A48DC7FAFAF4B18F90_size34_w719_h467.jpeg">
+      <img v-else-if="name=='zhu'" style="width: 200px;height: 150px;" src="https://imgsrc.baidu.com/baike/pic/item/96dda144ad34598252d152a300f431adcbef84ac.jpg"/>
+      <img v-else-if="name=='qiao'" style="width: 200px;height: 150px;" src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=945b61efd8c451daf6f60bed8ec6355b/3b87e950352ac65c9fb69fc2fef2b21192138ad4.jpg"/>
+      <img v-else style="width: 200px;height: 150px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575977987129&di=63e3263a995ca2bfe9976a1b5839fd0a&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F0207562dd73aaaf9f9e624664667818a04193dcd.jpg">
+    </div>
+      <script>
+      var app = new Vue({
+          el:"#app",
+          data:{
+              show:'false',
+              name:""
+            
+          }
+      })
+      </script>
+    
+    
+</body>
+</html>
